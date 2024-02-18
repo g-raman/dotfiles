@@ -8,7 +8,9 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "romkatv/powerlevel10k"
 
-export VI_MODE_ESC_INSERT="jk" && plug "zap-zsh/vim"
+# VIM mode
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+plug "jeffreytse/zsh-vi-mode"
 
 # Load and initialise completion system
 autoload -Uz compinit
