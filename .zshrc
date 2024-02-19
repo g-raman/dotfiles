@@ -11,6 +11,10 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "romkatv/powerlevel10k"
 
 
+# Move location of zcompdump files
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
@@ -19,4 +23,13 @@ compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first"
+
+
+mkdir -p ~/.cache/history
+
+
+# Change location of history files
+export NODE_REPL_HISTORY=~/.cache/history/node_history
+export LESSHISTFILE=-
