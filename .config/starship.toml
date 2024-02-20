@@ -1,0 +1,61 @@
+format = """
+$all\
+$fill\
+$git_state\
+$cmd_duration\
+$nodejs\
+$line_break\
+$character\
+"""
+add_newline = false
+
+
+[directory]
+format = "[󰉋 $path ]($style)"
+style = 'bold blue'
+truncation_length = 3
+truncation_symbol = ""
+
+
+[git_branch]
+symbol = " "
+style = "bold green"
+format = '[[$symbol $branch ]($style)]($style)'
+
+
+[git_status]
+format = '[[($ahead_behind$all_status)]($style)]($style)'
+style = 'bold yellow'
+# Remote repo stuff
+ahead = '${count}⇡ '
+diverged = '⇕${ahead_count}⇡ ${behind_count}⇣ '
+behind = '${count}⇣ '
+up_to_date = '[ ](bold green)'
+
+# CWD
+conflicted = '[${count}= ](bold red)'
+untracked = '[${count}? ](bold red)'
+modified = '[${count}! ](bold red)'
+staged = '${count}+ '
+stashed = '${count}$ '
+renamed = '${count}» '
+deleted = '${count}✘ '
+
+
+[git_commit]
+format = '[  @$hash$tag]($style) '
+commit_hash_length = 6
+tag_symbol = ' 🏷 '
+
+
+[nodejs]
+symbol = ""
+format = '[[ $symbol ($version) ]($style)]($style)'
+
+
+[cmd_duration]
+format = '[$duration]($style)'
+
+
+[fill]
+symbol = " "
