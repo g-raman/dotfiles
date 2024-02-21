@@ -4,7 +4,8 @@ This repository is still a work in progress. But this repo contains the config f
 Feel free to clone/fork it and use it for yourself :)
 
 # Screenshot
-![Setup](https://github.com/g-raman/dotfiles/assets/94656042/b3cd9bf2-9dae-421c-a3cf-314e64f5be8a)
+![Setup](https://github.com/g-raman/dotfiles/assets/94656042/45615e2c-7f40-4c90-ab4f-fb0307de88cd)
+
 
 
 # Installation
