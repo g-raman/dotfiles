@@ -52,6 +52,9 @@ tag_symbol = ' 🏷 '
 symbol = ""
 format = '[$symbol $version]($style)'
 
+[lua]
+disabled = true
+
 [package]
 disabled = true
 
