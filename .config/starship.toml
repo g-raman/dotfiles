@@ -50,7 +50,7 @@ tag_symbol = ' 🏷 '
 
 [nodejs]
 symbol = ""
-format = '[[ $symbol ($version) ]($style)]($style)'
+format = '[$symbol $version]($style)'
 
 
 [cmd_duration]
