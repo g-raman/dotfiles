@@ -10,6 +10,10 @@ autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 
+# Move location of .zsh_history
+export HISTFILE=~/.cache/zsh/zsh_history
+
+
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
 alias lt="ls --tree --no-user --no-permissions --no-filesize --no-time -I .git --level=3"
