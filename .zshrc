@@ -11,6 +11,7 @@ compinit
 
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first"
+alias lt="ls --tree --no-user --no-permissions --no-filesize --no-time -I .git --level=3"
 
 
 # Set shell prompt
