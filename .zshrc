@@ -5,8 +5,9 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 
 # Load and initialise completion system
+mkdir -p ~/.cache/zsh
 autoload -Uz compinit
-compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 
 # Alias for ls
@@ -16,10 +17,6 @@ alias lt="ls --tree --no-user --no-permissions --no-filesize --no-time -I .git -
 
 # Set shell prompt
 eval "$(starship init zsh)"
-
-
-# Move location of zcompdump files
-export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/.zcompdump"
 
 
 # Change location of history files
