@@ -3,6 +3,7 @@ $all\
 $fill\
 $git_state\
 $cmd_duration\
+$docker_context\
 $nodejs\
 $python\
 $line_break\
@@ -56,6 +57,10 @@ format = '[$symbol $version]($style)'
 [python]
 symbol = ''
 format = '[$symbol $version]($style)'
+
+[docker_context]
+symbol = '󰡨'
+format = '[$symbol $context ]($style)'
 
 [lua]
 disabled = true
