@@ -7,6 +7,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 # Load and initialise completion system
 mkdir -p ~/.cache/zsh
 autoload -Uz compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 
