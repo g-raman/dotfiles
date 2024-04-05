@@ -43,7 +43,15 @@ find_files() {
     --bind 'ctrl-p:change-preview-window(50%|hidden|)' | xargs nvim
 }
 
+open_file() {
+  fd --type f --hidden -E .git -E .DS_Store -E node_modules | fzf-tmux \
+    -p 85%,65% --preview 'bat --color=always \
+    --style="snip,changes,header,header-filename,rule" {}' --preview-window right,50% \
+    --bind 'ctrl-p:change-preview-window(50%|hidden|)' | xargs -I % open %
+}
+
 bindkey -s "^f" 'find_files\n'
+bindkey -s "^o" 'open_file\n'
 
 
 # Change location of history files
