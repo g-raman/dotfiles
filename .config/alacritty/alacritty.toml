@@ -34,13 +34,11 @@ save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
-decorations = "buttonless"
+decorations = "Buttonless"
 dynamic_padding = true
 startup_mode = "Windowed"
-
-[window.padding]
-x = 10
-y = 10
+padding.x = 10
+padding.y = 10
 
 [colors.primary]
 background = "#1E1E2E"
