@@ -13,7 +13,15 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # Move location of .zsh_history
 export HISTFILE=~/.cache/zsh/zsh_history
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
 
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
