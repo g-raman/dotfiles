@@ -1,6 +1,12 @@
 start-at-login = true
 enable-normalization-flatten-containers = false
 
+after-startup-command = ['exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar']
+exec-on-workspace-change = ['/bin/bash', '-c', '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change FOCUSED=$AEROSPACE_FOCUSED_WORKSPACE']
+
+[gaps]
+outer.top = 40
+
 [mode.main.binding]
 cmd-h = 'focus left'
 cmd-j = 'focus down'
@@ -39,6 +45,7 @@ cmd-ctrl-9 = 'move-node-to-workspace 9'
 cmd-ctrl-0 = 'move-node-to-workspace 0'
 
 alt-shift-c = 'reload-config'
+
 
 cmd-ctrl-r = 'mode resize'
 [mode.resize.binding]
