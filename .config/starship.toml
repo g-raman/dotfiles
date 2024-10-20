@@ -41,7 +41,7 @@ conflicted = '[${count}= ](bold red)'
 untracked = '[${count}? ](bold red)'
 modified = '[${count}! ](bold red)'
 staged = '${count}+ '
-stashed = '${count}$ '
+stashed = '${count}\$ '
 renamed = '${count}» '
 deleted = '${count}✘ '
 
