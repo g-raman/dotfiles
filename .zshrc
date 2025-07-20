@@ -26,6 +26,7 @@ bindkey '^[[B' history-search-forward
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
 alias lt="ls --tree --no-user --no-permissions --no-filesize --no-time -I .git --level=3"
+alias gs="git switch \$(git branch | fzf | sed 's/^..//')"
 
 
 # Set shell prompt
