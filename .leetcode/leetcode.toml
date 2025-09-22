@@ -1,0 +1,22 @@
+[code]
+editor = "nvim"
+
+lang = "python"
+edit_code_marker = false
+start_marker = ""
+end_marker = ""
+
+comment_problem_desc = false
+comment_leading = ""
+test = true
+
+[cookies]
+csrf = ""
+session = ""
+site = "leetcode.com"
+
+[storage]
+cache = "Problems"
+code = "code"
+root = "~/.leetcode"
+scripts = "scripts"
