@@ -1,0 +1,17 @@
+theme = Catppuccin Mocha
+
+font-family = JetBrainsMono Nerd Font
+font-size = 16
+
+cursor-color = cell-foreground
+cursor-style = block
+
+clipboard-read = allow
+clipboard-write = allow
+
+title = ""
+macos-window-buttons = hidden
+macos-titlebar-style = hidden
+
+window-padding-x = 16
+window-padding-y = 16
