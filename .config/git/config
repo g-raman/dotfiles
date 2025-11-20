@@ -15,6 +15,10 @@
   showStash = true
   showUntrackedFiles = all
 
+[log]
+  abbrevCommit = true
+  graphColors  = blue,yellow,cyan,magenta,green,red
+
 [color]
   ui = auto
 
