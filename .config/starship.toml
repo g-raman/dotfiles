@@ -1,13 +1,14 @@
 format = """
 $all\
 $fill\
-$aws\
 $git_state\
 $cmd_duration\
 $docker_context\
+$bun\
 $nodejs\
 $python\
 $golang\
+$aws\
 $line_break\
 $character\
 """
@@ -55,6 +56,10 @@ tag_symbol = ' 🏷 '
 [nodejs]
 symbol = ""
 format = '[$symbol $version]($style)'
+
+[bun]
+symbol = ""
+format = '[$symbol $version]($style) '
 
 [python]
 symbol = ''
