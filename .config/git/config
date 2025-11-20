@@ -1,8 +1,8 @@
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [core]
   editor = nvim
@@ -29,8 +29,8 @@
   whitespace = yellow reverse
   old        = red
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+[init]
+  defaultBranch = main
 
 [push]
   autoSetupRemote = true
@@ -47,7 +47,13 @@
   markEmptyLines = false
 
 [merge]
-    conflictstyle = zdiff3
+  conflictstyle = zdiff3
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+[url "git@github.com:g-raman/"]
+  insteadOf = "raman:"
 
 [include]
   path = ~/.gitconfig.local
