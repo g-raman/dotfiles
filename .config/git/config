@@ -5,9 +5,9 @@
 	required = true
 
 [core]
-	editor = nvim
+  editor = nvim
   preloadindex = true
-  pager = delta
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [status]
   branch = true
@@ -22,21 +22,29 @@
 [color]
   ui = auto
 
-[init]
-	defaultBranch = main
+[color.diff]
+  meta       = black bold
+  frag       = magenta
+  context    = white
+  whitespace = yellow reverse
+  old        = red
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+
+[diff]
+  context = 3
+  renames = copies
+  interHunkContext = 10
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = diff-so-fancy --patch
 
-[delta]
-    navigate = true
-    dark = true
+[diff-so-fancy]
+  markEmptyLines = false
 
 [merge]
     conflictstyle = zdiff3
