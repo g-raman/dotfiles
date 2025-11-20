@@ -46,6 +46,12 @@
 [diff-so-fancy]
   markEmptyLines = false
 
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
+
 [merge]
   conflictstyle = zdiff3
 
