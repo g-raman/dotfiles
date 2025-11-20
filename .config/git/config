@@ -8,6 +8,12 @@
 	editor = nvim
   pager = delta
 
+[status]
+  branch = true
+  short = true
+  showStash = true
+  showUntrackedFiles = all
+
 [color]
   ui = auto
 
