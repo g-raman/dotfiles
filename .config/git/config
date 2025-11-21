@@ -7,7 +7,11 @@
 [core]
   editor = nvim
   preloadindex = true
-  pager = delta --hunk-header-style "none" 
+
+[pager]
+  branch = true
+  tag = false
+  diff = diff-so-fancy | less
 
 [status]
   branch = true
@@ -18,7 +22,6 @@
 [log]
   abbrevCommit = true
   graphColors  = blue,yellow,cyan,magenta,green,red
-
 
 [init]
   defaultBranch = main
@@ -32,11 +35,11 @@
   interHunkContext = 10
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = diff-so-fancy --patch
   singleKey = true
 
-[delta]
-  line-numbers = false
+[diff-so-fancy]
+    markEmptyLines = false
 
 [branch]
   sort = -committerdate
