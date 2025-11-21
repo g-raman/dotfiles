@@ -25,7 +25,13 @@ bindkey '^[[B' history-search-forward
 
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
-alias gs="git switch \$(git branch | fzf | sed 's/^..//')"
+alias gs="git status"
+alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
+alias gb="git switch \$(git branch | fzf | sed 's/^..//')"
+alias gd='git diff'
+alias gds="gd --staged"
+alias gpom="git pull origin main"
+alias gfom="git fetch origin main:main"
 
 
 # Set shell prompt
