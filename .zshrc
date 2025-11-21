@@ -1,3 +1,6 @@
+# Variables
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Zap setup
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
