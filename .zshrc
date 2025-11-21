@@ -31,6 +31,7 @@ alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
 alias gs="git status"
 alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
 alias gb="git switch \$(git branch | fzf | sed 's/^..//')"
+alias gsm="git switch main"
 alias gd='git diff'
 alias gds="gd --staged"
 alias gpom="git pull origin main"
