@@ -36,6 +36,8 @@ alias gds="gd --staged"
 alias gpom="git pull origin main"
 alias gfom="git fetch origin main:main"
 
+alias lg="lazygit"
+
 
 # Set shell prompt
 eval "$(starship init zsh)"
