@@ -7,7 +7,7 @@
 [core]
   editor = nvim
   preloadindex = true
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta --hunk-header-style "none" 
 
 [status]
   branch = true
@@ -32,10 +32,11 @@
   interHunkContext = 10
 
 [interactive]
-  diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only
+  singleKey = true
 
-[diff-so-fancy]
-  markEmptyLines = false
+[delta]
+  line-numbers = false
 
 [branch]
   sort = -committerdate
@@ -45,13 +46,6 @@
 
 [merge]
   conflictstyle = zdiff3
-
-[color.diff]
-  meta       = black bold
-  frag       = magenta
-  context    = white
-  whitespace = yellow reverse
-  old        = red
 
 [color.branch]
   current  = magenta
