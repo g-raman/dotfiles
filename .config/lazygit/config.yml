@@ -1,0 +1,5 @@
+git:
+  pagers:
+    - pager: diff-so-fancy --patch
+gui:
+  mainPanelSplitMode: horizontal
