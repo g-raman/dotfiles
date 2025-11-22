@@ -16,8 +16,7 @@
 [status]
   branch = true
   short = true
-  showStash = true
-  showUntrackedFiles = all
+  showUntrackedFiles = "all"
 
 [log]
   abbrevCommit = true
