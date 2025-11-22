@@ -32,6 +32,7 @@ alias gs="git status"
 alias gl='git log --graph --all --pretty=format:"%C(bold blue)%h %C(bold green)(%ar) %C(white)- %an%C(reset)%C(auto)%d%n %C(white)%s %n"'
 alias gb="git switch \$(git branch | fzf | sed 's/^..//')"
 alias gsm="git switch main"
+alias grm="git rebase main"
 alias gd='git diff'
 alias gds="gd --staged"
 alias gpom="git pull origin main"
