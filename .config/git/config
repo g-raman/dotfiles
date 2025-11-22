@@ -11,7 +11,7 @@
 [pager]
   branch = true
   tag = false
-  diff = diff-so-fancy | less
+  diff = diff-so-fancy | less -RF
 
 [status]
   branch = true
