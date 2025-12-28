@@ -39,6 +39,7 @@ alias gpom="git pull origin main"
 alias gfom="git fetch origin main:main"
 
 alias lg="lazygit"
+alias lc="leetcode"
 
 
 # Set shell prompt
