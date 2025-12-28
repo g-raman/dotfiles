@@ -1,9 +1,6 @@
 start-at-login = true
 enable-normalization-flatten-containers = false
 
-after-startup-command = ['exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar']
-exec-on-workspace-change = ['/bin/bash', '-c', '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change FOCUSED=$AEROSPACE_FOCUSED_WORKSPACE']
-
 [mode.main.binding]
 cmd-h = 'focus left'
 cmd-j = 'focus down'
@@ -55,10 +52,6 @@ esc = 'mode esc'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
-run = "layout floating"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
 run = "layout floating"
 
 [[on-window-detected]]
