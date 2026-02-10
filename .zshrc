@@ -45,6 +45,7 @@ alias gfom='git fetch origin "$(git_default_branch)":"$(git_default_branch)"'
 
 alias lg="lazygit"
 alias lc="leetcode"
+alias oc="opencode"
 
 
 # Set shell prompt
