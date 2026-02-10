@@ -26,17 +26,22 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+git_default_branch() {
+  git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null |
+    sed 's@^origin/@@'
+}
+
 # Alias for ls
 alias ls="eza -1 -a -l --sort extension --group-directories-first --no-user"
 alias gs="git status"
 alias gl='git log --graph --all --pretty=format:"%C(bold blue)%h %C(bold green)(%ar) %C(white)- %an%C(reset)%C(auto)%d%n %C(white)%s %n"'
 alias gb="git switch \$(git branch | fzf | sed 's/^..//')"
-alias gsm="git switch main"
-alias grm="git rebase main"
+alias gsm='git switch "$(git_default_branch)"'
+alias grm='git rebase "$(git_default_branch)"'
 alias gd='git diff'
 alias gds="gd --staged"
-alias gpom="git pull origin main"
-alias gfom="git fetch origin main:main"
+alias gpom='git pull origin "$(git_default_branch)"'
+alias gfom='git fetch origin "$(git_default_branch)":"$(git_default_branch)"'
 
 alias lg="lazygit"
 alias lc="leetcode"
