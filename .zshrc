@@ -42,6 +42,11 @@ alias gd='git diff'
 alias gds="gd --staged"
 alias gpom='git pull origin "$(git_default_branch)"'
 alias gfom='git fetch origin "$(git_default_branch)":"$(git_default_branch)"'
+alias gstat='git diff --shortstat | awk '\''{
+  printf "\033[36m%s files changed\033[0m, ", $1
+  printf "\033[32m%s insertions(+)\033[0m, ", $4
+  printf "\033[31m%s deletions(-)\033[0m\n", $6
+}'\'''
 
 alias lg="lazygit"
 alias lc="leetcode"
