@@ -105,3 +105,5 @@ case ":$PATH:" in
 esac
 
 export PATH="/Users/raman/.cargo/bin/:$PATH"
+export PATH="/Users/raman/.bun/bin:$PATH"
+
