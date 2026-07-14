@@ -1,0 +1,7 @@
+{
+  "trustedtaps": [
+    "nikitabobko/tap",
+    "oven-sh/bun",
+    "shopify/shopify"
+  ]
+}
