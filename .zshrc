@@ -83,6 +83,30 @@ open_file() {
     --bind 'ctrl-p:change-preview-window(50%|hidden|)' | xargs -I % open %
 }
 
+hwt() {
+  local repo_root result wt_path
+
+  repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "hwt: not inside a git repo" >&2; return 1; }
+  result=$(herdr worktree create "$@" --json)
+  wt_path=$(echo "$result" | jq -r '.result.worktree.path')
+
+  if [ -z "$wt_path" ]; then
+    local err_msg
+    err_msg=$(echo "$result" | jq -r '.error.mesage')
+
+    if [ -n "$err_msg" ]; then
+      echo "hwt: herdr error: $err_msg" >&2
+    else
+      echo "hwt: could not determine worktree path from herdr output" >&2
+      echo "$result" >&2
+    fi
+
+    return 1
+  fi
+
+  bash "$HOME/scripts/setup-worktree.sh" "$wt_path"
+}
+
 bindkey -s "^f" 'find_files\n'
 bindkey -s "^o" 'open_file\n'
 
