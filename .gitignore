@@ -1,3 +1,8 @@
+# Herdr
+.config/herdr/release-notes.json
+.config/herdr/session.json
+.config/opencode/plugins/herdr-agent-state.js
+
 # Cloudflare
 .wrangler
 
